@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.e193f303f7a5d0c3c18b06a5ff6144ef.js"
+  "/precache-manifest.1a31292830f187f18f4007d4e831d044.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "f1-infographic"});
