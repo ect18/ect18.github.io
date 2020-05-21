@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.aead00e3d2ee9aba8de4b7d7981c899f.js"
+  "/precache-manifest.a555661e63986faa8d54af00732037b2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "f1-infographic"});
@@ -32,5 +32,3 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-workbox.routing.registerRoute(/https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/, new workbox.strategies.StaleWhileRevalidate(), 'GET');

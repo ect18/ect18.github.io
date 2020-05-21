@@ -1,1 +1,67 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>f1-infographic</title><link href=/css/app.a9f02a8f.css rel=preload as=style><link href=/css/chunk-vendors.478bcb70.css rel=preload as=style><link href=/js/app.99bcfbc8.js rel=preload as=script><link href=/js/chunk-vendors.2c2ea8ec.js rel=preload as=script><link href=/css/chunk-vendors.478bcb70.css rel=stylesheet><link href=/css/app.a9f02a8f.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/img/icons/favicon-16x16.png><link rel=manifest href=/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=f1-infographic><link rel=apple-touch-icon href=/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>We're sorry but f1-infographic doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.2c2ea8ec.js></script><script src=/js/app.99bcfbc8.js></script></body></html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>f1-infographic</title><style type=text/css>body {
+      background-color: #2c2c2c;
+    }
+
+    .spinner-wrap {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+    }
+
+    .spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transform-origin: center;
+      width: 120px;
+      height: 120px;
+      display: none;
+    }
+
+    .spinner-wrap.active .spinner {
+      display: block;
+    }
+
+    body>.spinner-wrap .spinner {
+      display: block;
+    }
+
+    .app+.spinner-wrap {
+      display: none;
+    }
+
+    .spinner::before,
+    .spinner::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transform-origin: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: rgba(237, 28, 26, 0.5);
+    }
+
+    .spinner::before {
+      animation: spinner 0.8s infinite linear;
+    }
+
+    .spinner::after {
+      animation: spinner 0.8s infinite linear reverse;
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+      }
+
+      100% {
+        transform: translate3d(-50%, -50%, 0) scale3d(2.8, 2.8, 2.8);
+      }
+    }</style><link href=/css/app.7b86c51b.css rel=preload as=style><link href=/css/chunk-vendors.478bcb70.css rel=preload as=style><link href=/js/app.e726e9a8.js rel=preload as=script><link href=/js/chunk-vendors.67904c5b.js rel=preload as=script><link href=/css/chunk-vendors.478bcb70.css rel=stylesheet><link href=/css/app.7b86c51b.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/img/icons/favicon-16x16.png><link rel=manifest href=/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=f1-infographic><link rel=apple-touch-icon href=/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>We're sorry but f1-infographic doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><div class=spinner-wrap><div class=spinner></div></div><script src=/js/chunk-vendors.67904c5b.js></script><script src=/js/app.e726e9a8.js></script></body></html>
