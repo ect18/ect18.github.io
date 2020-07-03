@@ -2,12 +2,111 @@
 <html>
 
 <head>
-  <title>My App</title>
-  <script>
-    var path = window.location.pathname; // get the path url
-    window.sessionStorage.path = path; // saves on sessionStorage
-    window.location.href = '/'; // go to index
-  </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" /> -->
+  <title>f1-infographic</title>
+  <style type="text/css">
+    body {
+      background-color: #2c2c2c;
+      background-image: url('/img/bg.png');
+      background-repeat: repeat;
+    }
+
+    .spinner {
+      align-items: center;
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .spinner.active {
+      display: flex;
+    }
+
+    .spinner--app {
+      display: flex;
+      height: 100%;
+    }
+
+    .spinner__inner {
+      display: block;
+      height: 22px;
+      position: relative;
+      width: 22px;
+    }
+
+    body>.spinner {
+      display: flex;
+    }
+
+    .app+.spinner {
+      display: none;
+    }
+
+    .spinner__inner::before,
+    .spinner__inner::after {
+      background-color: rgba(237, 28, 26, 0.5);
+      border-radius: 50%;
+      content: '';
+      height: 100%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transform-origin: center;
+      width: 100%;
+    }
+
+    .spinner--app .spinner__inner::before,
+    .spinner--app .spinner__inner::after {
+      height: 19px;
+      width: 19px;
+    }
+
+    .spinner__inner::before {
+      animation: spinner__inner 0.8s infinite linear;
+    }
+
+    .spinner__inner::after {
+      animation: spinner__inner 0.8s infinite linear reverse;
+    }
+
+    .spinner__text {
+      font-size: 14px;
+      line-height: 1;
+      margin-top: 1.75em;
+    }
+
+    @keyframes spinner__inner {
+      0% {
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+      }
+
+      100% {
+        transform: translate3d(-50%, -50%, 0) scale3d(2.8, 2.8, 2.8);
+      }
+    }
+  </style>
 </head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but f1-infographic doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <div class="spinner">
+    <div class="spinner__inner"></div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
 
 </html>
